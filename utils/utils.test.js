@@ -46,3 +46,17 @@ it('should be the names', () => {
    lastName: 'Mead'
  });
 });
+
+it('should async add two numbers', (done) => {
+  utils.asyncAdd(4,3,(sum)=>{
+    expect(sum).toBe(7).toBeA('number');
+    done();
+  });
+});
+
+it('should async square number', (done)=>{
+  utils.asyncSquare(3, (square)=>{
+    expect(square).toBe(9).toBeA('number');
+    done();
+  });
+});
